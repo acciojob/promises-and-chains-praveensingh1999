@@ -4,17 +4,17 @@ function submitform() {
 	const age= document.querySelector("#age").value;
 const name= document.querySelector("#name").value;
 if(!age || !name){
-	alert("Please enter valid details.");
+	alert("Please enter valid details");
 }
 	if(age && name)
 	{
 	let promise1 = new Promise((res,rej)=>{
 		setTimeout(()=>{
 			if(age>18){
-				res("Welcome, . You can vote.");
+				res(`Welcome, {name). You can vote.`);
 			}
 			else{
-				rej("Oh sorry . You aren't old enough.");
+				rej(`Oh sorry ${name}. You aren't old enough.`);
 			}
 		},4000)
 	})
