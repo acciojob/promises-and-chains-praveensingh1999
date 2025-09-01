@@ -11,7 +11,7 @@ if(!age || !name){
 	let promise1 = new Promise((res,rej)=>{
 		setTimeout(()=>{
 			if(age>18){
-				res(`Welcome, {name). You can vote.`);
+				res(`Welcome, ${name}. You can vote.`);
 			}
 			else{
 				rej(`Oh sorry ${name}. You aren't old enough.`);
